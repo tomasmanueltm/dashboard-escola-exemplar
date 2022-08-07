@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria</title>
+    <link rel="stylesheet" href="../assets/sass/index.css">
+</head>
+<body>
+<section class="painelSecretaria">
+    <div class="menu">
+        <div class="perfil">
+            <h1>Sistema</h1>
+
+            <div class="clear">
+                <div class="img">
+                    <!--Aqui adiciona foto-->
+                    <img src="../assets/src/" alt="fotoUsuario">
+                </div>
+                <div class="dado">
+                    <h3>Albertina Anastacia</h3>
+                    <p>Funcionaria</p>
+                </div>
+            </div>
+        </div>
+        <ul class="ul">
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="#">Cadastro</a>
+                <ul class="down">
+                    <li><a href="cadastroAluno.html">Aluno</a></li>
+                    <li><a href="cadastroFuncionario.html">Funcionario</a></li>
+                    <li><a href="cadastroDisciplina.html">Disciplina</a></li>
+                    <li><a href="cadastroNota.html">Nota</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Registros</a>
+                <ul class="down">
+                    <li><a href="#">Funcionario</a></li>
+                    <li><a href="#">Aluno</a></li>
+                    <li><a href="#">Nota</a></li>
+                </ul> 
+            </li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+    <div class="router-url">
+
+<section class="ModelCadastro">
+    <h1>Cadastro de Notas</h1>
+    <form action="" class="" method="post">
+       <div>
+        <label for="">
+            <p>Ano Lectivo</p>
+            <select name="anoLetivo" id="anoLetivo">
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+        </label>
+        <label for="">
+            <p>Aluno</p>
+            <select name="id_aluno" id="id_aluno">
+                <option value="1">Anastacia</option>
+                <option value="2">Albertina</option>
+                <option value="3">Manuel</option>
+            </select>
+        </label>
+        
+        <label for="">
+            <p>Tipo</p>
+            <select name="tipo" id="tipo">
+                <option value="exame">Exame</option>
+                <option value="recurso">Resumo</option>
+                <option value="avaliacao">Avaliação</option>
+            </select>
+        </label>
+
+        <label for="">
+            <p>Disciplina</p>
+            <select name="id_disciplina" id="id_disciplina">
+                <option value="1">Lingua Portuguesa</option>
+                <option value="2">Estatistica</option>
+                <option value="3">Matematica</option>
+            </select>
+        </label>
+
+        <label for="">
+            <p>Nota</p>
+            <input type="number" name="valor" id="valor" placeholder="10">
+        </label>
+       </div>
+
+       <button class="cadastro">Cadastrar</button>
+    </form>
+</section>
+
+</div>
+</section>
+</body>
+</html>

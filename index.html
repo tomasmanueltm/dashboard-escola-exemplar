@@ -1,81 +1,67 @@
+<!-- 
+    
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.io.*, java.util.*" %>
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal</title>
+    <title>Sistema de Gestão</title>
     <link rel="stylesheet" href="assets/sass/index.css">
 </head>
 <body>
     
-    <!-- header -->
-    <header>
-        <div class="left">
-            <h1>Logotipo</h1>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Categoria</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <div class="icons">
-                <a target="_black" href="https://github.com/tomasmanueltm"><i class="bi bi-github" title="Github"></i></a></li>
-                <a target="_black" href="https://www.linkedin.com/in/tomasmanueltm"><i class="bi bi-linkedin" title="Linkedin"></i></a></li>
-                <a target="_black" href="https://www.facebook.com/tomasmanueltm"><i class="bi bi-facebook" title="Facebook"></i></a>
-                <a href="#"><i class="bi bi-cart"></i></a>
-            </div>
-            <img src="assets/src/cv.jpg" alt="">
-        </div>
-    </header>
+    <section class="painelSecretaria">
+        <div class="menu">
+            <div class="perfil">
+                <h1>Sistema</h1>
 
-    <section>
-        <div class="left">
-            <!-- imagem-central -->
-            <div class="img">
-                <img src="" alt=">  emagem central">
-            </div>
-            <!-- lista de emagem -->
-            <ul class="lista">
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-            </ul>
-        </div>
-
-        <!-- right -->
-        <div class="right">
-            <div class="descricao">
-                <span>Sneaker Company</span>
-                <h1>Fall Limited Edition Sneakers</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatum laudantium molestias. Assumenda exercitationem, sequi fugiat quidem voluptate voluptatem cumque magni veritatis quibusdam? Earum rem excepturi, itaque saepe totam dolorum.</p>
-            </div>
-            <div class="valores">
-                <div class="preco">
-                    <div>
-                        <h2 class="atual-preco">$125.00</h2>
-                        <span class="desconto">50%</span>
+                <div class="clear">
+                    <div class="img">
+                        <!--Aqui adiciona foto-->
+                        <img src="assets/src/nome_da_foto" alt="">
                     </div>
-                    <p class="anteriore-preco">$250.00</p>
-                </div>
-                <div class="form">
-                    <div class="inputs">
-                        <i>-</i>
-                        <i class="">+</i>
-                        <span class="count">0</span>
-                    </div>
-
-                    <div class="button">
-                        <i class="bi bi-cart2"></i>
-                        <span>Add to cart</span>
+                    <div class="dado">
+                        <h3>Albertina Anastacia</h3>
+                        <p>Funcionaria</p>
                     </div>
                 </div>
             </div>
+            <ul class="ul">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Cadastro</a>
+                    <ul class="down">
+                        <li><a href="views/cadastroAluno.html">Aluno</a></li>
+                        <li><a href="views/cadastroFuncionario.html">Funcionario</a></li>
+                        <li><a href="views/cadastroDisciplina.html">Disciplina</a></li>
+                        <li><a href="views/cadastroNota.html">Nota</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">Registros</a>
+                    <ul class="down">
+                        <li><a href="#">Funcionario</a></li>
+                        <li><a href="#">Aluno</a></li>
+                        <li><a href="#">Nota</a></li>
+                    </ul> 
+                </li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>
+        <div class="router-url">
+            <section class="dashboard">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section> 
         </div>
     </section>
 
+
 </body>
 </html>
+

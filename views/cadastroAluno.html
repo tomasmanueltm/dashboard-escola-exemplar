@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria</title>
+    <link rel="stylesheet" href="../assets/sass/index.css">
+</head>
+<body>
+<section class="painelSecretaria">
+    <div class="menu">
+        <div class="perfil">
+            <h1>Sistema</h1>
+
+            <div class="clear">
+                <div class="img">
+                    <!--Aqui adiciona foto-->
+                    <img src="../assets/src/" alt="fotoUsuario">
+                </div>
+                <div class="dado">
+                    <h3>Albertina Anastacia</h3>
+                    <p>Funcionaria</p>
+                </div>
+            </div>
+        </div>
+        <ul class="ul">
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="#">Cadastro</a>
+                <ul class="down">
+                    <li><a href="cadastroAluno.html">Aluno</a></li>
+                    <li><a href="cadastroFuncionario.html">Funcionario</a></li>
+                    <li><a href="cadastroDisciplina.html">Disciplina</a></li>
+                    <li><a href="cadastroNota.html">Nota</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Registros</a>
+                <ul class="down">
+                    <li><a href="#">Funcionario</a></li>
+                    <li><a href="#">Aluno</a></li>
+                    <li><a href="#">Nota</a></li>
+                </ul> 
+            </li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+    <div class="router-url">
+        <section class="ModelCadastro">
+                        <h1>Cadastro de Aluno</h1>
+                        <form action="" class="controleProfessor" method="post">
+                           <div>
+                            <label for="">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome_completo">
+                            </label>
+                            <label for="">
+                                <p>Curso</p>
+                                <select name="curso" id="curso">
+                                    <option value="1">Informatica</option>
+                                    <option value="2">Arquitetura</option>
+                                    <option value="3">Oge</option>
+                                </select>
+                            </label>
+                            <label for="">
+                                <p>Turma</p>
+                                <select name="turma" id="turma">
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                    <option value="3">C</option>
+                                </select>
+                            </label>
+                            <label for="">
+                                <p>Periodo</p>
+                                <select name="turma" id="turma">
+                                    <option value="manha">Manhã</option>
+                                    <option value="tarde">Tarde</option>
+                                    <option value="noite">Noite</option>
+                                </select>
+                            </label>
+                            <label for="">
+                                <p>Data Nascimento</p>
+                                <input type="date" name="data_nascimento">
+                            </label>
+                            <label for="">
+                                <p>Genero</p>
+                                <select name="seco" id="sexo">
+                                    <option value="masculio">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                </select>
+                            </label>
+                            <label for="">
+                                <p>Modara</p>
+                                <input type="text" name="morada" placeholder="Ru n.º, casa n.">
+                            </label>
+                            <label for="">
+                                <p>Telefone</p>
+                                <input type="tel" name="telefone" placeholder="999 999 999">
+                            </label>
+                            <label for="">
+                                <p>Numero</p>
+                                <input type="text" name="usuarioId" placeholder="Cod_usuario">
+                            </label>
+                           </div>
+                
+                           <button class="cadastro">Cadastrar</button>
+                        </form>
+        </section>
+</div>
+</section>
+</body>
+</html>

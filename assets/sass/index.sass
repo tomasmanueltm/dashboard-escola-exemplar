@@ -1,173 +1,209 @@
 @import "__"
-@import "../icon/icons.css"
+@import url("../icon/icons.css")
 
 
 body
-    padding: 0 4.5em
+    // padding: 0 4.5em
 
-header
-    @include flex
-    @include padrao(3rem 0 2rem)
+  
+.painelSecretaria
+    height: 100vh
+    @include index(1rem)
 
+    .menu
+        float: left
+        width: 300px
+        // background: #ccc
 
-    .left
-        @include flex(center)
-        gap: 2rem
+        .perfil
+            width: 100%
+            // height: 150px
+            padding: 1rem
+            display: block
+            position: relative
+            text-align: center
+            // border: 2px solid #999
 
-        h1
-            font-size: max(.5fr, 2vw)
-            font-family: Roboto!important
+            &::before
+                top: 0px
+                left: 0px
+                right: 0px
+                width: 100%
+                z-index: -1
+                content: ""
+                height: 150px
+                display: block
+                border-radius: 10px
+                position: absolute
+                background: #32b0e1
 
-        ul
+            h1
+                color: #fff
+                font-weight: 900
+                padding: 1rem 0 0
+                letter-spcing: 1px
+
+            .clear
+                width: 100%
+                margin: 2rem 0 0rem
+
+                .img
+                    width: 100%
+                    display: block
+
+                    img
+                        width: 90px
+                        height: 90px
+                        border: .4rem solid #fff
+                        object-fit: cover
+                        border-radius: 50%
+                .dado
+                        h3
+                            padding: 5px 0
+                        p
+                            color: #999
+                            font-size: .9rem
+                            font-weight: 400
+
+        .ul  
+            clear: both
+            display: block
+            padding: 2rem 1.5rem
+            
             li
-                margin: 0 1rem
-                display: inline-block
+                display: block
+                margin: 0 0 .9rem
+                position: relative
 
                 a
-                    color: #666
-                    cursor: pointer
-                    font-size: 1.2rem
-                    text-transform: capitalize
-            
-    .right
-        @include flex(center)
-        gap: .5rem
+                    color: #000
+                    font-weight: 400
+                    letter-spacing: 1px
 
-        .icons
-            padding-right: 1rem
+                ul.down
+                    top: 20px
+                    right: 0px
+                    z-index: 1
+                    width: 100%
+                    display: none
+                    position: absolute
+                    padding: 0rem 1.5rem
+                    background: #32b0e1
+                    transition: display 500ms
 
-            a
-                color: #666
-                margin: 0 .8rem
-                font-size: 1.2rem
-                display: inline-block
+                    li
+                        margin: 10px 0
+                        position: relative
+
+                        a
+                            color: #fff
+
+                        ul.on
+                            top: 20px
+                            right: 0px
+                            z-index: 1
+                            width: 100%
+                            display: none
+                            position: absolute
+                            padding: 0rem 1.5rem
+                            background: #0b3749
+                            transition: display 500ms
+
+                            li
+                                margin: 10px 0
+
+                                a
+                                    color: #fff
+                        &:hover
+                            transition: display 500ms
+                            ul.on
+                                display: block
+                                transition: display 500ms
+
+
+                &:hover
+                    transition: display 500ms
+                    ul.down
+                        display: block
+                        transition: display 500ms
                     
-        img
-            width: 45px
-            height: 45px
-            object-fit: cover
-            border-radius: 50%
-
-section
-    @include padrao(4rem 0)
-    @include flex(normal, flex-start)
-    border-top: 1px solid #cccc
-    gap: 4rem
-
-    .left
-        width: 600px
-        // height: 300px
-        border-radius: 5px
-
-        .img
+    .router-url
+        float: right
+        min-width: 75%
+        padding: 2rem 1rem
+        // background: #ccc
+        // pagina da dashboard
+        .dashboard
             width: 100%
-            height: 330px
-            overflow: hidden
-            border-radius: 3px
-            border: 1px solid var(--l)
+            @include grid(3)
 
-            img
+            div
+                height: 200px
+                padding: 1rem
+                background: #32b0e1
 
-                height: 100%
-                width: inherit
-                object-fit: cover
-        .lista
-            float: left
-            width: inherit
-            margin: 1rem 0 0
+                &:first-child
+                    grid-column: 1 / 2 span
 
-            @include grid(4, 2rem)
 
-            li
-                height: 80px
-                overflow: hidden
-                border-radius: 3px
-                border: 1px solid var(--l)
-
-    .right
-
-        width: inherit
-        padding: .2em 2rem
-
-        .descricao
-            width: inherit
-
-            span
-                font-size: 1.1em
-                font-weight: 900
-                line-height: 2em
-                color: var(--l)
-                font-family: Roboto
-            h1
-                font-size: 2.3em
-                font-family: Roboto
-                letter-spacing: 3px
-                padding: 0 1.8rem 0 0
-            p
-                padding: 1rem 0
-                font-weight: 400
-                font-size: 1rem
-                line-height: 1.5em
+    .ModelCadastro 
+        width: 900px
+        height: 400px
+        // padding: 1rem 0
+        // margin: 2rem auto
+        // border: 2px solid #000
         
-        .valores
-            width: inherit
-            display: block
+        
+        h1
+            padding: 0 2rem
+            font-weight: 900
+            font-size: 1.3rem
+            text-align: center
+            letter-spacing: .2rem
+            text-transform: uppercase
 
-            .preco
-                float: left
 
-                div
-                    float: left
-                    padding: 0 0 .5em
-                    @include flex(baseline)
+        form
+            // display: none
+            padding: 2rem
+            margin: 2rem 0
+            border-radius: 5px
+            background: #32b0e1
 
-                    h2
-                        font-size: 2.3em
-                        font-weight: 900
-                        font-family: Roboto
-                    span
-                        font-size: 1em
-                        padding: 0 0 0 2rem
-                        color: var(--l)
-                        font-family: Roboto
-                p
-                    color: #999
-                    display: block
-                    font-size: 1.2em
-                    font-weight: 900
-                    text-decoration: line-through
 
-            .form
-                width: 100%
-                clear: both
-                padding: 1rem 0 0
-                @include flex(normal, flex-start)
-                gap: 2rem
+            div
+                @include grid(3, 1rem 2.5rem)
 
-                .inputs
-                    width: 120px
-                    position: relative
-                    @include flex(center)
+                label
+                    p
+                        font-size: .8rem
+                        padding: .6rem 0
+                        letter-spacing: .1rem
+                        text-transform: uppercase 
 
-                    i
-                        z-index: 1
-                        color: var(--l)
-                        cursor: pointer
-                        font-size: 1.3em
-                        font-weight: 900
-                        font-style: normal
-                        font-family: Roboto
-
-                    span
-                        z-index: 0
+                    input, select
                         width: 100%
-                        text-align: center
-                        position: absolute
-                
-                .button
-                    color: #fff
-                    padding: .5rem 2rem
-                    border-radius: 5px
-                    background: var(--l)
+                        border: none
+                        outline: none
+                        padding: .6rem .3rem
 
+                        &:hover
+                            border: none
+                            outline: none
+            button
+                border: none
+                outline: none
+                margin: 1rem 0
+                cursor: pointer
+                border-radius: 5px
+                padding: .8rem 2rem
+
+
+                &.labelPainel
+                    top: 25px
+                    padding: 1rem 0
+                    position: relative
+                    border-top: 3px solid #ccc
     
+#tela_iframe
+    width: 100%

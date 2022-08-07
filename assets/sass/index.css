@@ -1,19 +1,21 @@
-@import "../icon/icons.css";
+@import url("../icon/icons.css");
 @font-face {
   font-family: "Roboto";
   src: url("../font/Roboto.ttf");
 }
+
 @font-face {
   font-family: "Linotte";
   src: url("../font/Linotte.otf");
 }
+
 * {
   margin: 0px;
   padding: 0px;
   list-style: none;
   font-weight: 600;
   word-break: keep-all;
-  font-family: Linotte;
+  font-family: Roboto;
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -54,199 +56,236 @@ body {
   width: 0px !important;
 }
 
-body {
-  padding: 0 4.5em;
+.painelSecretaria {
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
 }
 
-header {
-  display: flex;
-  align-items: normal;
-  justify-content: space-between;
-  flex-direction: row;
+.painelSecretaria .menu {
+  float: left;
+  width: 300px;
+}
+
+.painelSecretaria .menu .perfil {
   width: 100%;
-  padding: 3rem 0 2rem;
+  padding: 1rem;
+  display: block;
+  position: relative;
+  text-align: center;
 }
-header .left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 2rem;
+
+.painelSecretaria .menu .perfil::before {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  background: #32b0e1;
 }
-header .left h1 {
-  font-size: max(0.5fr, 2vw);
-  font-family: Roboto !important;
+
+.painelSecretaria .menu .perfil h1 {
+  color: #fff;
+  font-weight: 900;
+  padding: 1rem 0 0;
+  letter-spcing: 1px;
 }
-header .left ul li {
-  margin: 0 1rem;
-  display: inline-block;
+
+.painelSecretaria .menu .perfil .clear {
+  width: 100%;
+  margin: 2rem 0 0rem;
 }
-header .left ul li a {
-  color: #666;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-transform: capitalize;
+
+.painelSecretaria .menu .perfil .clear .img {
+  width: 100%;
+  display: block;
 }
-header .right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-header .right .icons {
-  padding-right: 1rem;
-}
-header .right .icons a {
-  color: #666;
-  margin: 0 0.8rem;
-  font-size: 1.2rem;
-  display: inline-block;
-}
-header .right img {
-  width: 45px;
-  height: 45px;
+
+.painelSecretaria .menu .perfil .clear .img img {
+  width: 90px;
+  height: 90px;
+  border: .4rem solid #fff;
   object-fit: cover;
   border-radius: 50%;
 }
 
-section {
-  width: 100%;
-  padding: 4rem 0;
-  display: flex;
-  align-items: normal;
-  justify-content: flex-start;
-  flex-direction: row;
-  border-top: 1px solid rgba(204, 204, 204, 0.8);
-  gap: 4rem;
-}
-section .left {
-  width: 600px;
-  border-radius: 5px;
-}
-section .left .img {
-  width: 100%;
-  height: 330px;
-  overflow: hidden;
-  border-radius: 3px;
-  border: 1px solid var(--l);
-}
-section .left .img img {
-  height: 100%;
-  width: inherit;
-  object-fit: cover;
-}
-section .left .lista {
-  float: left;
-  width: inherit;
-  margin: 1rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-}
-section .left .lista li {
-  height: 80px;
-  overflow: hidden;
-  border-radius: 3px;
-  border: 1px solid var(--l);
-}
-section .right {
-  width: inherit;
-  padding: 0.2em 2rem;
-}
-section .right .descricao {
-  width: inherit;
-}
-section .right .descricao span {
-  font-size: 1.1em;
-  font-weight: 900;
-  line-height: 2em;
-  color: var(--l);
-  font-family: Roboto;
-}
-section .right .descricao h1 {
-  font-size: 2.3em;
-  font-family: Roboto;
-  letter-spacing: 3px;
-  padding: 0 1.8rem 0 0;
-}
-section .right .descricao p {
-  padding: 1rem 0;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5em;
-}
-section .right .valores {
-  width: inherit;
-  display: block;
-}
-section .right .valores .preco {
-  float: left;
-}
-section .right .valores .preco div {
-  float: left;
-  padding: 0 0 0.5em;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-direction: row;
-}
-section .right .valores .preco div h2 {
-  font-size: 2.3em;
-  font-weight: 900;
-  font-family: Roboto;
-}
-section .right .valores .preco div span {
-  font-size: 1em;
-  padding: 0 0 0 2rem;
-  color: var(--l);
-  font-family: Roboto;
-}
-section .right .valores .preco p {
-  color: #999;
-  display: block;
-  font-size: 1.2em;
-  font-weight: 900;
-  text-decoration: line-through;
-}
-section .right .valores .form {
-  width: 100%;
-  clear: both;
-  padding: 1rem 0 0;
-  display: flex;
-  align-items: normal;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 2rem;
-}
-section .right .valores .form .inputs {
-  width: 120px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-section .right .valores .form .inputs i {
-  z-index: 1;
-  color: var(--l);
-  cursor: pointer;
-  font-size: 1.3em;
-  font-weight: 900;
-  font-style: normal;
-  font-family: Roboto;
-}
-section .right .valores .form .inputs span {
-  z-index: 0;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-}
-section .right .valores .form .button {
-  color: #fff;
-  padding: 0.5rem 2rem;
-  border-radius: 5px;
-  background: var(--l);
+.painelSecretaria .menu .perfil .clear .dado h3 {
+  padding: 5px 0;
 }
 
-/*# sourceMappingURL=index.css.map */
+.painelSecretaria .menu .perfil .clear .dado p {
+  color: #999;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.painelSecretaria .menu .ul {
+  clear: both;
+  display: block;
+  padding: 2rem 1.5rem;
+}
+
+.painelSecretaria .menu .ul li {
+  display: block;
+  margin: 0 0 .9rem;
+  position: relative;
+}
+
+.painelSecretaria .menu .ul li a {
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.painelSecretaria .menu .ul li ul.down {
+  top: 20px;
+  right: 0px;
+  z-index: 1;
+  width: 100%;
+  display: none;
+  position: absolute;
+  padding: 0rem 1.5rem;
+  background: #32b0e1;
+  transition: display 500ms;
+}
+
+.painelSecretaria .menu .ul li ul.down li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.painelSecretaria .menu .ul li ul.down li a {
+  color: #fff;
+}
+
+.painelSecretaria .menu .ul li ul.down li ul.on {
+  top: 20px;
+  right: 0px;
+  z-index: 1;
+  width: 100%;
+  display: none;
+  position: absolute;
+  padding: 0rem 1.5rem;
+  background: #0b3749;
+  transition: display 500ms;
+}
+
+.painelSecretaria .menu .ul li ul.down li ul.on li {
+  margin: 10px 0;
+}
+
+.painelSecretaria .menu .ul li ul.down li ul.on li a {
+  color: #fff;
+}
+
+.painelSecretaria .menu .ul li ul.down li:hover {
+  transition: display 500ms;
+}
+
+.painelSecretaria .menu .ul li ul.down li:hover ul.on {
+  display: block;
+  transition: display 500ms;
+}
+
+.painelSecretaria .menu .ul li:hover {
+  transition: display 500ms;
+}
+
+.painelSecretaria .menu .ul li:hover ul.down {
+  display: block;
+  transition: display 500ms;
+}
+
+.painelSecretaria .router-url {
+  float: right;
+  min-width: 75%;
+  padding: 2rem 1rem;
+}
+
+.painelSecretaria .router-url .dashboard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.painelSecretaria .router-url .dashboard div {
+  height: 200px;
+  padding: 1rem;
+  background: #32b0e1;
+}
+
+.painelSecretaria .router-url .dashboard div:first-child {
+  grid-column: 1 / 2 span;
+}
+
+.painelSecretaria .ModelCadastro {
+  width: 900px;
+  height: 400px;
+}
+
+.painelSecretaria .ModelCadastro h1 {
+  padding: 0 2rem;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-align: center;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+.painelSecretaria .ModelCadastro form {
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+  background: #32b0e1;
+}
+
+.painelSecretaria .ModelCadastro form div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem 2.5rem;
+}
+
+.painelSecretaria .ModelCadastro form div label p {
+  font-size: .8rem;
+  padding: .6rem 0;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
+.painelSecretaria .ModelCadastro form div label input, .painelSecretaria .ModelCadastro form div label select {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: .6rem .3rem;
+}
+
+.painelSecretaria .ModelCadastro form div label input:hover, .painelSecretaria .ModelCadastro form div label select:hover {
+  border: none;
+  outline: none;
+}
+
+.painelSecretaria .ModelCadastro form button {
+  border: none;
+  outline: none;
+  margin: 1rem 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: .8rem 2rem;
+}
+
+.painelSecretaria .ModelCadastro form button.labelPainel {
+  top: 25px;
+  padding: 1rem 0;
+  position: relative;
+  border-top: 3px solid #ccc;
+}
+
+#tela_iframe {
+  width: 100%;
+}

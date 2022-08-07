@@ -2,17 +2,19 @@
   font-family: "Roboto";
   src: url("../font/Roboto.ttf");
 }
+
 @font-face {
   font-family: "Linotte";
   src: url("../font/Linotte.otf");
 }
+
 * {
   margin: 0px;
   padding: 0px;
   list-style: none;
   font-weight: 600;
   word-break: keep-all;
-  font-family: Linotte;
+  font-family: Roboto;
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -52,5 +54,3 @@ body {
 *::-o-scrollbar {
   width: 0px !important;
 }
-
-/*# sourceMappingURL=__.css.map */
